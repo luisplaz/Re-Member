@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  
+  resources :users do
+    resources :decks
+  end
+
+  resources :decks do
+    resources :cards
+    resources :rounds
+  end
+
+  resources :rounds do
+    resources :guesses
+  end
+
+  root 'welcome#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
