@@ -4,16 +4,24 @@ Rails.application.routes.draw do
     resources :decks
   end
 
+  resources :sessions, only: [ :new, :create, :destroy ]
+  
   resources :decks do
     resources :cards
     resources :rounds
   end
+
+  resources :cards
 
   resources :rounds do
     resources :guesses
   end
 
   root 'welcome#index'
+
+  get 'login' => 'sessions#new'
+  delete 'logout' => 'sessions#destroy'
+  get 'register' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
