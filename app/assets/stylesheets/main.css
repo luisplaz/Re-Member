@@ -1,0 +1,110 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+#test-border{
+	border: 3px red solid;
+}
+
+/*Navigation Bar Styling*/
+
+.navigation-bar{
+	top: 0;
+	left: 0;
+	position: static;
+	display: block;
+	width: 100%;
+	height: 6.5rem;
+	background-color: #202A43;
+}
+
+.nav-options {
+	float: right;
+	text-decoration: none;
+	list-style: none;
+	display: flex;
+	margin-top: 5%
+}
+
+.nav-options li a {
+	margin-right: 1rem;
+	font-weight: bolder;
+	text-decoration: none;
+	color: white;
+}
+
+.logo {
+	height: 5rem;
+	width: 10rem;
+	position: static;
+	float: left;
+	padding-top:2%;
+}
+
+/*Div Styling*/
+
+.first-div{
+	height: 30rem;
+	background-image: url(../assets/Div-1.png);
+	background-repeat: no-repeat;
+	background-size: cover
+
+}
+
+.second-div{
+	height: 30rem;
+	border: 5px red solid;
+}
+
+.third-div{
+	height: 30rem;
+	border: 5px red solid;
+}
+
+.title {
+	padding-left: 3rem;
+	font-size: 2.5rem;
+}
+
+.information {
+	padding-left: 3rem;
+	padding-right: 3rem;
+	line-height: 1rem;
+}
+
+
+
+
+
+
+
+
+.banner{
+	margin-top: 25%;
+	display: bock;
+}
+
+main {
+	border-top: solid 10px #FF7A5A
+}
+
+.input-options {
+	display: flex;
+	margin-bottom: 0.5rem;
+}
+
+.input-options label {
+	width: 7.5rem;
+}
+
+.input-options input {
+	width: 100%;
+}
+
+#form {
+	margin-top: 1rem;
+}
