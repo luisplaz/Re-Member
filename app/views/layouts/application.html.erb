@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ReMember</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+	<title>ReMember</title>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= javascript_include_tag 'application' %>
+	<%= csrf_meta_tags %>
+	<meta charset="utf-8"> 
 </head>
 <body>
 
-<%= yield %>
+	<nav class="navigation-bar">
+		<img class="logo" src="../assets/Logo.png">
+		<ul class="nav-options">
+			<% if current_user %>
+				<li><%= link_to current_user.username, user_path(current_user) %></li>
+				<li><%= link_to 'Log Out', session_path(current_user), method: :delete %> </li>
+			<% else %>
+				<li><%= link_to 'Sign Up', new_user_path %></li>
+				<li><%= link_to 'Log In', new_session_path %></li>
+			<% end %>
+		</ul>
+	</nav>
+
+	<main>
+	<%= yield %>
+	</main>
 
 </body>
 </html>

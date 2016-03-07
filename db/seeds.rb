@@ -6,14 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
 num = 1
-Seeduser = User.create(username:"luisplaz", email:"luisplaz@hotmail.com", password_digest:"password")
-Seeddeck = Deck.create(name:"Deck", user: Seeduser)
-binding.pry
-SeedRound = Round.create(user:Seeduser, deck:Seeddeck)
+testUser = User.create(
+	username: "luisplaz", 
+	email: "luisplaz@hotmail.com", 
+	password: "password")
+
+testDeck = Deck.create(
+	name: "Test Deck", 
+	user: testUser)
+
+testRound = Round.create(
+	user: testUser,
+	deck: testDeck,
+	)
+
 5.times do
-	SeedCard = Card.create(name:"Card#{num}", title: "Title#{num}", description: "Description#{num}", deck: Deck)
-	Guess.create(card:SeedCard,round:SeedRound,answer:"True")
+	Guess.create(card:Card.create(name:"Card #{num}", title: "Title #{num}", description: "Description #{num}", deck: testDeck),round:testRound,answer:"True")
 	num += 1
 end

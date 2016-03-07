@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+<fieldset id="form">
+  <div class="input-options">
+    <%= f.label :username %>
+    <%= f.text_field :username, :minlength => 8 %>
+  </div>
+  <div class="input-options">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="input-options">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div class="form-button">
+  <%= f.submit 'Create Account', class: 'button-user' %>
+  </div>
+</fieldset>
+<% end %>
+
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <p class="error"><%= error %></p>
+  <% end %>
+<% end %>

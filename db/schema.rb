@@ -52,8 +52,6 @@ ActiveRecord::Schema.define(version: 20160222203646) do
     t.string   "username",        limit: 20, null: false
     t.string   "email",                      null: false
     t.string   "password_digest",            null: false
-    t.string   "provider"
-    t.string   "uid"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
   end
