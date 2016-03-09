@@ -1,0 +1,10 @@
+<h1><%= @deck.name %></h1>
+
+<h3> Cards In Deck </h3>
+<h4><%= link_to 'ADD CARD', new_deck_card_path(@deck.id) %></h4>
+
+<% @deck.cards.each do |card| %>
+	<%= card.name %>
+	<br>
+<% end %>
+
