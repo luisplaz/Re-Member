@@ -11,7 +11,7 @@
 <body>
 
 	<nav class="navigation-bar">
-		<img class="logo" src="../assets/Logo.png">
+	<%= link_to(image_tag("Logo.png",:class=>"logo"), root_path) %>
 		<ul class="nav-options">
 			<% if current_user %>
 				<li><%= link_to current_user.username, user_path(current_user) %></li>
