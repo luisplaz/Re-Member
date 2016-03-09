@@ -1,8 +1,9 @@
-<h1> Welcome <%= current_user.username %> </h1>
+<h1> Welcome, <%= current_user.username %> </h1>
 
-<h1><%= link_to 'Create Card',new_card_path %></h1>
+<h3><%= link_to 'Create Deck',new_deck_path %></h3>
 
-<h1> Decks Created </h1>
+<h3> Your Decks </h3>
+
 <% @user.decks.each do |deck| %>
-<%= deck.name %>
+<h4><%= link_to deck.name, deck_path(deck.id) %></h4>
 <% end %>
