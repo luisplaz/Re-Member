@@ -38,7 +38,7 @@ body {
 }
 
 .logo {
-	height: 5rem;
+	height: 5.2rem;
 	width: 10rem;
 	position: static;
 	float: left;
@@ -52,7 +52,6 @@ body {
 	background-image: url(../assets/Div-1.png);
 	background-repeat: no-repeat;
 	background-size: cover
-
 }
 
 .second-div{
@@ -107,9 +106,7 @@ main {
 
 #card {
 	display: inline-flex;
-	/*	height: 7rem;
-	width: 7.5rem;*/
-	border:3px solid #202A43;
+	border:5px solid black;
 	border-radius: 5%;
 	text-align: center;
 	color: #e65e64;
@@ -148,10 +145,10 @@ main {
 }
 
 #card .front {
-	background: red;
+	background: #202A43;
 }
 #card .back {
-	background: blue;
+	background: #FF7A5A;
 	transform: rotateY( 180deg );
 }
 
