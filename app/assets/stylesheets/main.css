@@ -18,7 +18,7 @@ body {
 	position: static;
 	display: block;
 	width: 100%;
-	height: 6.5rem;
+	height: 7rem;
 	background-color: #202A43;
 }
 
@@ -38,11 +38,11 @@ body {
 }
 
 .logo {
-	height: 5.2rem;
+	height: 5rem;
 	width: 10rem;
 	position: static;
 	float: left;
-	padding-top:2%;
+	padding-top:1rem;
 }
 
 /*Div Styling*/
@@ -101,11 +101,85 @@ main {
 	margin-top: 1rem;
 }
 
+/*Profile Styling*/
+
+.profile-nav{
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.profile-title{
+	font-size: 1.5rem;
+	width: 60%;
+	text-align: right;
+	padding:0;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.heading {
+	padding-left: 1rem;
+	width: 50%;
+	line-height: 3.5rem;
+}
+
+.deck-add-button{
+	width:39%;
+	text-align: left;
+	padding-left: 1%;
+	text-align: center;
+}
+
+.deck-add-button a{
+	width:100%;
+	line-height: 3.5rem;
+	text-decoration: none;
+	color:#F0B503;
+}
+
+/*Deck Styling*/
+
+.deck-title{
+	padding-left: 1rem;
+	width: 50%;
+}
+
+.deck-nav{
+	display: flex;
+	border-bottom: 1px solid black;
+}
 
 /*Card Styling*/
 
-#card {
+.card-add-button{
+	width:50%;
+	text-align: right;
+}
+
+.card-add-button a{
+	padding-top: 50%;
+	padding-right: 5%;
+	line-height: 5rem;
+	text-decoration: none;
+	color:#F0B503;
+}
+
+.card-main{
 	display: inline-flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.card-title{
+	font-size: 1rem;
+	text-align: center;
+	padding:0;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+#card {
 	border:5px solid black;
 	border-radius: 5%;
 	text-align: center;
@@ -131,8 +205,7 @@ main {
 	height: 10rem;
 	position: relative;
 	perspective: 800px;
-	display: inline-flex;
-	margin: 0 10px 20px 10px;
+	margin: 30px 10px 20px 20px;
 }
 
 #card figure {
@@ -146,10 +219,21 @@ main {
 
 #card .front {
 	background: #202A43;
+	opacity: 0.9;
+	color:#FF7A5A;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #card .back {
 	background: #FF7A5A;
+	color:#202A43;
 	transform: rotateY( 180deg );
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #card.flipped {
