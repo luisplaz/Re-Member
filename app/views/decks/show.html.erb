@@ -4,7 +4,21 @@
 <h4><%= link_to 'ADD CARD', new_deck_card_path(@deck.id) %></h4>
 
 <% @deck.cards.each do |card| %>
-	<%= card.name %>
-	<br>
+	<section class="container">
+		<div id="card">
+			<figure class="front">
+				<span>
+				<%= card.name %>
+				<br>
+				<%= card.title %>
+				</span>
+			</figure>
+			<figure class="back">
+				<span>
+				<%= card.description %>
+				</span>
+			</figure>
+		</div>
+	</section>
 <% end %>
 
