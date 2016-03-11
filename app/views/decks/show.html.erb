@@ -1,24 +1,23 @@
-<h1><%= @deck.name %></h1>
+<div class="deck-nav">
+	<h1 class="deck-title"><%= @deck.name %></h1>
+	<div class="card-add-button">
+		<%= link_to 'ADD CARD', new_deck_card_path(@deck.id) %>
+	</div>
+</div>	
 
-<h3> Cards In Deck </h3>
-<h4><%= link_to 'ADD CARD', new_deck_card_path(@deck.id) %></h4>
+<div class="card-main">
+	<% @deck.cards.each do |card| %>
+		<section class="container">
+			<div class="card-title"><%= card.name %></div>
+			<div id="card">
+				<figure class="front">
+					<%= card.title %>
+				</figure>
+				<figure class="back">
+					<%= card.description %>
+				</figure>
+			</div>
+		</section>
 
-<% @deck.cards.each do |card| %>
-	<section class="container">
-		<div id="card">
-			<figure class="front">
-				<span>
-				<%= card.name %>
-				<br>
-				<%= card.title %>
-				</span>
-			</figure>
-			<figure class="back">
-				<span>
-				<%= card.description %>
-				</span>
-			</figure>
-		</div>
-	</section>
-<% end %>
-
+	<% end %>
+</div>
