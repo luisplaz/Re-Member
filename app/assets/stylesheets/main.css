@@ -264,3 +264,17 @@ main {
 #card.flipped {
 	transform: rotateY( 180deg );
 }
+
+/*Guess Styling*/
+
+.guess-title{
+	text-align: center;
+}
+
+.guess-container{
+	width: 8rem;
+	height: 10rem;
+	position: relative;
+	perspective: 800px;
+	margin: 0 auto
+}
