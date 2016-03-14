@@ -271,10 +271,21 @@ main {
 	text-align: center;
 }
 
+.guess-question{
+	text-align: center;
+	margin-top:6rem;
+
+}
+
 .guess-container{
 	width: 8rem;
 	height: 10rem;
 	position: relative;
 	perspective: 800px;
 	margin: 0 auto
+}
+
+.guess-options {
+	margin: 0 auto;
+	text-align: center;
 }
