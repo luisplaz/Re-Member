@@ -7,6 +7,13 @@
 	</div>
 </div>
 
+<div class="decks-container">
+
 <% @user.decks.each do |deck| %>
-<h4><%= link_to deck.name, deck_path(deck.id) %></h4>
+	<div class ="deck-container">
+		<h4><%= link_to deck.name, deck_path(deck.id)%> (<%=deck.cards.size%>)</h4>
+		<h5><%= link_to 'Play Deck', deck_rounds_path(deck.id), :method => :post%> | <%= link_to 'Add Card', new_deck_card_path(deck.id) %></h5>
+	</div>
 <% end %>
+
+</div>
