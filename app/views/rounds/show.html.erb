@@ -1,0 +1,22 @@
+<h1 class="guess-title"> Quizing <%= @round.deck.name %> </h1>
+
+<div class="card-guess-main">
+	<section class="guess-container">
+		<div class="card-title"><%= @round.deck.cards.first.name %></div>
+		<div id="card">
+			<figure class="front">
+				<%= @round.deck.cards.first.title %>
+			</figure>
+			<figure class="back">
+				<%= @round.deck.cards.first.description %>
+			</figure>
+		</div>
+	</section>
+</div>
+
+<h1 class="guess-question"> DO YOU KNOW ME? </h1>
+
+<div class="guess-options">
+	<button> YES </button>
+	<button> NO </button>
+</div>

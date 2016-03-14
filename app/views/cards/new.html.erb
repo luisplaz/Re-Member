@@ -1,28 +1,28 @@
 <h1> CREATE A NEW CARD </h1>
 
 <% if @errors %>
-<% @errors.each do |error| %>
-<p class="error"><%= error %></p>
-<% end %>
+  <% @errors.each do |error| %>
+    <p class="error"><%= error %></p>
+  <% end %>
 <% end %>
 
 <%= form_for @card do |f| %>
-<fieldset id="form">
-  <div class="input-options">
-    <%= f.label :name %>
-    <%= f.text_field :name, :minlength => 8 %>
-  </div>
-  <div class="input-options">
-    <%= f.label :title%>
-    <%= f.text_field :title %>
-  </div>
-  <div class="input-options">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
+  <fieldset id="form">
+    <div class="input-options">
+      <%= f.label :name %>
+      <%= f.text_field :name, :minlength => 8 %>
+    </div>
+    <div class="input-options">
+      <%= f.label :title%>
+      <%= f.text_field :title %>
+    </div>
+    <div class="input-options">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
     <%= f.hidden_field :deck_id, :value => @deck.id %>
-  <div class="form-button">
-    <%= f.submit 'Save Card', class: 'button-user' %>
-  </div>
-</fieldset>
+    <div class="form-button">
+      <%= f.submit 'Save Card', class: 'button-user' %>
+    </div>
+  </fieldset>
 <% end %>

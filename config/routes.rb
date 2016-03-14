@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :cards
 
-  resources :rounds do
+  resources :rounds, only: [ :new, :show, :create, :index ] do
     resources :guesses
   end
 
