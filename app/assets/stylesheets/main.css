@@ -10,6 +10,12 @@ body {
 	border: 3px red solid;
 }
 
+.alert {
+	color:red;
+	text-align: center;
+	margin-top: 3rem;
+}
+
 /*Navigation Bar Styling*/
 
 .navigation-bar{
@@ -80,6 +86,11 @@ body {
 	font-size: 2.5rem;
 }
 
+.sub-title{
+	padding-top: 2rem;
+	text-align: center;
+}
+
 .information {
 	padding-left: 3rem;
 	padding-right: 3rem;
@@ -95,13 +106,21 @@ main {
 	border-top: solid 10px #FF7A5A
 }
 
+.form-container{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.form-button{
+	text-align: right;
+}
 .input-options {
 	display: flex;
 	margin-bottom: 0.5rem;
 }
 
 .input-options label {
-	width: 7.5rem;
+	width: 9.5rem;
 }
 
 .input-options input {
@@ -109,8 +128,24 @@ main {
 }
 
 #form {
+	text-align: center;
+	margin: 0 auto;
 	margin-top: 1rem;
+	border: none;
 }
+
+label{
+	display: inline-block;
+	float: left;
+	clear: left;
+	text-align: right;
+	margin-right: 1rem;
+}
+input {
+	display: inline-block;
+
+}
+
 
 /*Profile Styling*/
 
@@ -174,6 +209,7 @@ main {
 	display: flex;
 	border-bottom: 1px solid black;
 }
+
 
 /*Card Styling*/
 
@@ -275,7 +311,6 @@ main {
 .guess-question{
 	text-align: center;
 	margin-top:6rem;
-
 }
 
 .guess-container{
@@ -289,4 +324,12 @@ main {
 .guess-options {
 	margin: 0 auto;
 	text-align: center;
+}
+
+/*Round Styling*/
+
+.stats{
+	text-align: center;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
 }
