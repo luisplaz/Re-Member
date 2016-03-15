@@ -1,4 +1,6 @@
-<h1> CREATE A NEW DECK </h1>
+<div class="form-container">
+
+<h2 class="sub-title"> CREATE A NEW DECK </h2>
 
 <% if @errors %>
   <% @errors.each do |error| %>
@@ -10,10 +12,12 @@
 <fieldset id="form">
   <div class="input-options">
     <%= f.label :name %>
-    <%= f.text_field :name, :minlength => 8 %>
+    <%= f.text_field :name, :minlength => 5, :required => true %>
   </div>
   <div class="form-button">
   <%= f.submit 'Save Deck', class: 'button-user' %>
   </div>
 </fieldset>
 <% end %>
+
+</div>
