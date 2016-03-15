@@ -10,9 +10,13 @@
 
 		<% @round.guesses.each do |guess|%>
 			<div class="stats">
-				<%= guess.card.name %> | <%= guess.answer %>
+				<%=guess.card.name %>  |  <%= guess.answer %>
 			</div>
 		<% end %>
+
+		<div class="guess-options">
+		<%= link_to 'RETRY', deck_rounds_path(@round.deck.id), method: :post,:class=>"guess-button button-green"%>
+		</div>
 
 	<% else %>
 
@@ -29,7 +33,6 @@
 			</div>
 		</section>
 		</div>
-
 
 		<h1 class="guess-question"> DO YOU KNOW ME? </h1>
 
