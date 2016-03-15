@@ -209,7 +209,6 @@ input {
 	border-bottom: 1px solid black;
 }
 
-
 /*Card Styling*/
 
 .card-add-button{
@@ -330,9 +329,9 @@ input {
   vertical-align: top;
   position: relative;
   overflow: hidden;
-  min-width: 96px;
+  min-width: 50px;
   line-height: 46px;
-  padding: 0 24px;
+  padding: 0 18px;
   font-size: 14px;
   color: white;
   text-align: center;
@@ -392,6 +391,7 @@ input {
   text-shadow: 0 1px #0d4d09;
   background-color: #1ca913;
   border-color: #147b0e #11640b #11640b;
+  margin-right: 1rem;
 }
 
 .button-green:hover { background-color: #159b0d; }
@@ -410,6 +410,7 @@ input {
   text-shadow: 0 1px #72100d;
   background-color: #cd1d18;
   border-color: #9f1713 #891310 #891310;
+  margin-left: 1rem;
 }
 
 .button-red:hover { background-color: #c01511; }
