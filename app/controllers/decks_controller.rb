@@ -1,9 +1,5 @@
 class DecksController < ApplicationController
 
-	def show
-		@deck = Deck.includes(:cards).find_by(id: params[:id])
-	end
-
 	def new
 		@deck = Deck.new
 	end
@@ -16,6 +12,15 @@ class DecksController < ApplicationController
 			@errors = @user.errors.full_messages
 			render new_deck_card_path
 		end
+	end
+
+	def show
+		@deck = Deck.includes(:cards).find_by(id: params[:id])
+	end
+
+	def destroy
+		Deck.find(params[:id]).destroy
+    	redirect_to user_path(current_user)
 	end
 
 	private

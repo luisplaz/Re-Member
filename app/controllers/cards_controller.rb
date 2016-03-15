@@ -15,6 +15,11 @@ class CardsController < ApplicationController
 		end
 	end
 
+	def destroy
+		Card.find(params[:id]).destroy
+    	redirect_to user_path(current_user)
+	end
+
 	private
 
 	def card_params
