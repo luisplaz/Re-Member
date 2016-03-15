@@ -12,7 +12,7 @@
 <% @user.decks.each do |deck| %>
 	<div class ="deck-container">
 		<h4><%= link_to deck.name, deck_path(deck.id)%> (<%=deck.cards.size%>)</h4>
-		<h5><%= link_to 'Play Deck', deck_rounds_path(deck.id), :method => :post%> | <%= link_to 'Add Card', new_deck_card_path(deck.id) %></h5>
+		<h5><%= link_to 'Play Deck', deck_rounds_path(deck.id), :method => :post%> | <%= link_to 'Add Card', new_deck_card_path(deck.id) %> | <%= link_to "Delete Deck", delete_deck_path(id:deck.id), method: :delete %></h5>
 	</div>
 <% end %>
 
