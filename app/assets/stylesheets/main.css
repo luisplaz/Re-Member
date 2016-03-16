@@ -258,10 +258,16 @@ input {
 	align-items: center;
 }
 
+.img_preview{
+	width: 100%;
+	height: 100%;
+	border-radius: 5%;
+}
+
 /*Card Flip*/
 
 .container { 
-	width: 8rem;
+	width: 9.5rem;
 	height: 10rem;
 	position: relative;
 	perspective: 800px;
@@ -308,15 +314,16 @@ input {
 
 .guess-question{
 	text-align: center;
-	margin-top:6rem;
+	margin-top:3rem;
 }
 
 .guess-container{
-	width: 8rem;
-	height: 10rem;
+	width: 12.5rem;
+	height: 13.2rem;
 	position: relative;
 	perspective: 800px;
-	margin: 0 auto
+	margin: 0 auto;
+	margin-top: 2rem;
 }
 
 .guess-options {
@@ -432,4 +439,13 @@ input {
 	text-align: center;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
+}
+
+.img_thumb{
+	width: 5rem;
+	height: 5rem;
+	border-radius: 5%;
+	display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem
 }
