@@ -10,7 +10,7 @@
 
 		<% @round.guesses.each do |guess|%>
 			<div class="stats">
-				<%=guess.card.name %>  |  <%= guess.answer %>
+				<%=image_tag guess.card.avatar.url(:thumb), :class => "img_thumb" %> <%=guess.card.name %>  |  <%= guess.answer %>
 			</div>
 		<% end %>
 
@@ -22,10 +22,9 @@
 
 		<div class="card-guess-main">
 		<section class="guess-container">
-			<div class="card-title"><%= @round.current_card.name %></div>
 			<div id="card">
 				<figure class="front">
-					<%= @round.current_card.title %>
+					<%= image_tag @round.current_card.avatar.url(:medium), :class => "img_preview" %>
 				</figure>
 				<figure class="back">
 					<%= @round.current_card.description %>
