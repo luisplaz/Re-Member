@@ -11,13 +11,12 @@
 			<div class="card-title"><%= card.name %></div>
 			<div id="card">
 				<figure class="front">
-					<%= card.title %>
+					<%= image_tag card.avatar.url(:medium), :class => "img_preview" %>
 				</figure>
 				<figure class="back">
 					<%= card.description %>
 				</figure>
 			</div>
 		</section>
-
 	<% end %>
 </div>
