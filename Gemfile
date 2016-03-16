@@ -30,8 +30,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+# Use Paperclip For Picture Upload
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
 #Use faker for seeding purposes
 gem 'faker'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

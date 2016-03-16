@@ -23,7 +23,7 @@ class CardsController < ApplicationController
 	private
 
 	def card_params
-		card_params = params.require(:card).permit(:name, :title, :description,:deck_id)
+		card_params = params.require(:card).permit(:name, :title, :description,:deck_id,:avatar)
 	end
 
 end
