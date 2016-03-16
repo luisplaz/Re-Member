@@ -20,7 +20,7 @@ class Round < ActiveRecord::Base
 	private
 
 	def destroy_guesses
-	  self.guesses.delete_all    
+		self.guesses.delete_all    
 	end
 
 end
