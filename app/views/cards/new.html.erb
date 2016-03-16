@@ -1,0 +1,30 @@
+<div class="form-container">
+
+<h2 class="sub-title"> CREATE A NEW CARD </h2>
+
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <p class="error"><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_for @card do |f| %>
+  <fieldset id="form">
+    <div class="input-options">
+      <%= f.label :name %>
+      <%= f.text_field :name, :required => true %>
+    </div>
+    <div class="input-options">
+      <%= f.label :title%>
+      <%= f.text_field :title, :required => true %>
+    </div>
+    <div class="input-options">
+      <%= f.label :hint %>
+      <%= f.text_field :description, :required => true %>
+    </div>
+    <%= f.hidden_field :deck_id, :value => @deck.id %>
+    <div class="form-button">
+      <%= f.submit 'Save Card', class: 'button-user' %>
+    </div>
+  </fieldset>
+<% end %>
