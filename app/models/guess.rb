@@ -1,7 +1,9 @@
 class Guess < ActiveRecord::Base
+
+	has_one    :user, :through => :round
 	belongs_to :round
 	belongs_to :card
-	has_one :user, :through => :round
 
-	validates :answer, presence: true
+	validates  :answer, presence: true
+
 end
