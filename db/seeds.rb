@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-num = 1
 testUser = User.create(
 	username: "luisplaz", 
 	email: "luisplaz@hotmail.com", 
@@ -22,6 +21,11 @@ testRound = Round.create(
 	)
 
 5.times do
-	Guess.create(card:Card.create(name:"Card #{num}", title: "Title #{num}", description: "Description #{num}", deck: testDeck),round:testRound,answer:"True")
-	num += 1
+	Card.create(
+		name: Faker::Name.name, 
+		title: Faker::Company.profession, 
+		description: Faker::Company.buzzword, 
+		deck: testDeck, 
+		avatar:Faker::Avatar.image
+		)
 end
