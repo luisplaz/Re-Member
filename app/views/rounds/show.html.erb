@@ -36,8 +36,8 @@
 		<h1 class="guess-question"> DO YOU KNOW ME? </h1>
 
 		<div class="guess-options">
-			<%= link_to 'YES', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "YES"), method: :post,:class=>"guess-button button-green"  %>
-			<%= link_to 'NO', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "NO"), method: :post,:class=>"guess-button button-red"%>
+			<%= link_to 'YES', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "YES"), method: :post,:class=>"guess-btn btn-green"  %>
+			<%= link_to 'NO', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "NO"), method: :post,:class=>"guess-btn btn-red"%>
 		</div>
 
 	<% end %>
