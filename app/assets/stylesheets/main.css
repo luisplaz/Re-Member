@@ -139,8 +139,8 @@ body {
 }
 
 .steps img{
-	width: 7rem;
-	height: 7rem;
+	width: 50%;
+	height: 50%;
 	padding-right:3rem; 
 	padding-left:3rem;
 	margin-top: 1rem;
@@ -149,10 +149,12 @@ body {
 .steps{
 	margin-top: 3rem;
 	display: inline-flex;
+	width: 100%
 }
 
 .icon{
-	width:13.5rem;
+	width:24%;
+	text-align: center;
 }
 
 .icon h4{
@@ -179,6 +181,7 @@ body {
 	display: inline-block;
 	vertical-align: middle;
 	white-space: normal;
+	width: 100%
 }
 
 /*Misc Styling*/
@@ -222,7 +225,7 @@ main {
 }
 
 .input-options label {
-	width: 9.5rem;
+	width: 5rem;
 }
 
 .input-options input {
@@ -337,7 +340,7 @@ input {
 	height: 3rem;
 	padding:0;
 	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.2rem;
 }
 
 #card {
@@ -372,7 +375,7 @@ input {
 	height: 10rem;
 	position: relative;
 	perspective: 800px;
-	margin: 30px 10px 60px 20px;
+	margin: 30px 10px 60px 16px;
 }
 
 #card figure {
@@ -411,6 +414,7 @@ input {
 
 .guess-title{
 	text-align: center;
+	margin-top: 8rem;
 }
 
 .guess-question{
@@ -427,12 +431,12 @@ input {
 	margin-top: 2rem;
 }
 
-.guess-options {
+.guess-options{
 	margin: 0 auto;
 	text-align: center;
 }
 
-.guess-button {
+.guess-btn{
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
@@ -444,49 +448,11 @@ input {
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	text-shadow: 0 1px #154c86;
-	background-color: #247edd;
-	background-clip: padding-box;
 	border: 1px solid;
-	border-color: #1c65b2 #18589c #18589c;
 	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
-	box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
-	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
-	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.12) 51%, rgba(0, 0, 0, 0.04));
 }
 
-.guess-button:before {
-	content: '';
-	position: absolute;
-	top: -25%;
-	bottom: -25%;
-	left: -20%;
-	right: -20%;
-	border-radius: 50%;
-	background: transparent;
-	-webkit-box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
-	box-shadow: inset 0 0 38px rgba(255, 255, 255, 0.5);
-}
-
-.guess-button:hover { background-color: #1a74d3; }
-
-.guess-button:active {
-	color: rgba(255, 255, 255, 0.9);
-	text-shadow: 0 -1px #154c86;
-	background: #1f71c8;
-	border-color: #113f70 #154c86 #1c65b2;
-	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
-	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
-	background-image: -webkit-linear-gradient(top, #1a5da5, #3a8be0);
-	background-image: -moz-linear-gradient(top, #1a5da5, #3a8be0);
-	background-image: -o-linear-gradient(top, #1a5da5, #3a8be0);
-	background-image: linear-gradient(to bottom, #1a5da5, #3a8be0);
-}
-
-.guess-button:active:before {
+.guess-btn:active:before {
 	top: -50%;
 	bottom: -125%;
 	left: -15%;
@@ -495,42 +461,26 @@ input {
 	box-shadow: inset 0 0 96px rgba(0, 0, 0, 0.2);
 }
 
-.button-green {
+.btn-green {
 	text-shadow: 0 1px #0d4d09;
-	background-color: #1ca913;
+	background-color: #209514;
 	border-color: #147b0e #11640b #11640b;
 	margin-right: 1rem;
 }
 
-.button-green:hover { background-color: #159b0d; }
-
-.button-green:active {
-	text-shadow: 0 -1px #0d4d09;
-	background: #189210;
-	border-color: #093606 #0d4d09 #147b0e;
-	background-image: -webkit-linear-gradient(top, #126d0c, #20c016);
-	background-image: -moz-linear-gradient(top, #126d0c, #20c016);
-	background-image: -o-linear-gradient(top, #126d0c, #20c016);
-	background-image: linear-gradient(to bottom, #126d0c, #20c016);
+.btn-green:hover { 
+	background-color: #3AB62D;
 }
 
-.button-red {
+.btn-red {
 	text-shadow: 0 1px #72100d;
-	background-color: #cd1d18;
+	background-color: #B62119;
 	border-color: #9f1713 #891310 #891310;
 	margin-left: 1rem;
 }
 
-.button-red:hover { background-color: #c01511; }
-
-.button-red:active {
-	text-shadow: 0 -1px #72100d;
-	background: #b61a15;
-	border-color: #5b0d0b #72100d #9f1713;
-	background-image: -webkit-linear-gradient(top, #921511, #e4201b);
-	background-image: -moz-linear-gradient(top, #921511, #e4201b);
-	background-image: -o-linear-gradient(top, #921511, #e4201b);
-	background-image: linear-gradient(to bottom, #921511, #e4201b);
+.btn-red:hover { 
+	background-color: #DE3737;
 }
 
 /*Round Styling*/
