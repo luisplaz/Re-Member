@@ -448,8 +448,9 @@ input {
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	border: 1px solid;
+	border: 1px solid white;
 	border-radius: 4px;
+	margin-bottom: 2rem;
 }
 
 .guess-btn:active:before {
@@ -485,10 +486,30 @@ input {
 
 /*Round Styling*/
 
+.quiz-info{
+	text-align: center;
+}
+
 .stats{
 	text-align: center;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
+}
+
+.answers{
+	display: inline-flex;
+	margin: auto 0;
+}
+
+.answer-info{
+	margin-right: 1rem;
+	margin-bottom: 3rem;
+	margin-left: 1rem
+}
+
+.answer-info:nth-child(1){
+	border-right: 1.5px solid black;
+	padding-right: 2rem;
 }
 
 .img_thumb{
