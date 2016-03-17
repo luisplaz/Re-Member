@@ -6,4 +6,13 @@ class Guess < ActiveRecord::Base
 
 	validates  :answer, presence: true
 
+	def right?
+		self.answer == "YES"
+	end
+
+	def wrong?
+		self.answer == "NO"
+	end
+
+
 end
