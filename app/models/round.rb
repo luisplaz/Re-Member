@@ -1,11 +1,9 @@
 class Round < ActiveRecord::Base
-
-	before_destroy :destroy_guesses
-
+	
+	has_many    :guesses, dependent: :destroy
+	has_many    :cards, :through => :guesses
 	belongs_to  :user
 	belongs_to  :deck
-	has_many    :guesses, dependent: :delete_all
-	has_many    :cards, :through => :guesses
 
 	def current_card
 		guessed_cards  = self.guesses.pluck(:card_id)
@@ -15,12 +13,6 @@ class Round < ActiveRecord::Base
 
 	def complete?
 		self.deck.cards.size == self.guesses.size
-	end
-
-	private
-
-	def destroy_guesses
-		self.guesses.delete_all    
 	end
 
 end
