@@ -1,43 +1,75 @@
-<h1 class="guess-title"> Quizing <%= @round.deck.name %> </h1>
+<div class="quiz-info">
 
-	<% if @round.deck.cards.empty?  %>
+	<h1 class="guess-title"> Quizing <%= @round.deck.name %> </h1>
 
-		<h3 class="alert"> NO CARDS IN DECK </h3>
+		<% if @round.deck.cards.empty?  %>
 
-	<% elsif @round.complete? %>
+			<h3 class="alert"> NO CARDS IN DECK </h3>
 
-		<h2 class="sub-title"> Round Statistics </h2>
+		<% elsif @round.complete? %>
 
-		<% @round.guesses.each do |guess|%>
-			<div class="stats">
-				<%=image_tag guess.card.avatar.url(:thumb), :class => "img_thumb" %> <%=guess.card.name %>  |  <%= guess.answer %>
+			<h2 class="sub-title"> Round Statistics </h2>
+
+			<div class="answers">
+
+				<div class="answer-info">
+
+					<h3 class="sub-title"> You guessed right </h3>
+
+					<% @round.guesses.each do |guess|%>
+
+						<% if guess.right?  %>
+						<div class="stats">
+							<%=image_tag guess.card.avatar.url(:thumb), :class => "img_thumb" %> <%=guess.card.name %>
+						</div>
+						<% end %>
+
+					<% end %>
+
+				</div>
+
+				<div class="answer-info">
+
+					<h3 class="sub-title"> You guessed wrong </h3>
+
+					<% @round.guesses.each do |guess|%>
+						
+						<% if guess.wrong?  %>
+						<div class="stats">
+							<%=image_tag guess.card.avatar.url(:thumb), :class => "img_thumb" %> <%=guess.card.name %>
+						</div>
+						<% end %>
+
+					<% end %>
+
+				</div>
 			</div>
+
+			<div class="guess-options">
+			<%= link_to 'RETRY', deck_rounds_path(@round.deck.id), method: :post,:class=>"guess-btn btn-green"%>
+			</div>
+
+		<% else %>
+
+			<div class="card-guess-main">
+			<section class="guess-container">
+				<div id="card">
+					<figure class="front">
+						<%= image_tag @round.current_card.avatar.url(:medium), :class => "img_preview" %>
+					</figure>
+					<figure class="back">
+						<%= @round.current_card.description %>
+					</figure>
+				</div>
+			</section>
+			</div>
+
+			<h1 class="guess-question"> DO YOU KNOW ME? </h1>
+
+			<div class="guess-options">
+				<%= link_to 'YES', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "YES"), method: :post,:class=>"guess-btn btn-green"  %>
+				<%= link_to 'NO', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "NO"), method: :post,:class=>"guess-btn btn-red"%>
+			</div>
+
 		<% end %>
-
-		<div class="guess-options">
-		<%= link_to 'RETRY', deck_rounds_path(@round.deck.id), method: :post,:class=>"guess-button button-green"%>
-		</div>
-
-	<% else %>
-
-		<div class="card-guess-main">
-		<section class="guess-container">
-			<div id="card">
-				<figure class="front">
-					<%= image_tag @round.current_card.avatar.url(:medium), :class => "img_preview" %>
-				</figure>
-				<figure class="back">
-					<%= @round.current_card.description %>
-				</figure>
-			</div>
-		</section>
-		</div>
-
-		<h1 class="guess-question"> DO YOU KNOW ME? </h1>
-
-		<div class="guess-options">
-			<%= link_to 'YES', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "YES"), method: :post,:class=>"guess-btn btn-green"  %>
-			<%= link_to 'NO', round_guesses_path(card_id: @round.current_card.id, round_id: @round, answer: "NO"), method: :post,:class=>"guess-btn btn-red"%>
-		</div>
-
-	<% end %>
+</div>
