@@ -11,8 +11,10 @@ testUser = User.create(
 	email: "luisplaz@hotmail.com", 
 	password: "password")
 
+3.times do
+
 testDeck = Deck.create(
-	name: "Test Deck", 
+	name: Faker::University.name, 
 	user: testUser)
 
 testRound = Round.create(
@@ -28,4 +30,6 @@ testRound = Round.create(
 		deck: testDeck, 
 		avatar:Faker::Avatar.image
 		)
+end
+
 end
