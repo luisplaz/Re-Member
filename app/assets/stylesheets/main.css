@@ -6,6 +6,10 @@ body {
 	margin: 0;
 }
 
+a {
+	color:#202A43;
+}
+
 #test-border{
 	border: 3px red solid;
 }
@@ -320,7 +324,7 @@ input {
 }
 
 .cards-container .container{
-	margin: 22px 10px 85px auto;
+	margin: 22px auto 85px auto;
 }
 
 .cards-container .card-title{
