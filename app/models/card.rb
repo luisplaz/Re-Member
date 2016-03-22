@@ -7,4 +7,16 @@ class Card < ActiveRecord::Base
 
   	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   	
+  	def number_right
+  		if self.guesses
+  			self.guesses.where(answer: "YES").count
+  		end
+  	end
+
+  	def number_wrong
+  		if self.guesses
+  			self.guesses.where(answer: "NO").count
+  		end
+  	end
+
 end
