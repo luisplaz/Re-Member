@@ -1,19 +1,43 @@
 <h1 class="profile-title"> Welcome, <%= current_user.username %> </h1>
 
 <div class="profile-nav">
+	<div class="deck-add-button"><%= link_to 'Create Deck',new_deck_path%> </div>
 	<div class="heading"> My Decks </div>
-	<div class="deck-add-button">
-		<%= link_to 'Create Deck',new_deck_path %>
-	</div>
+	<div class="heading"> My Cards </div>	
 </div>
 
 <div class="decks-container">
 
-<% @user.decks.each do |deck| %>
-	<div class ="deck-container">
-		<h4><%= link_to deck.name, deck_path(deck.id)%> (<%=deck.cards.size%>)</h4>
-		<h5><%= link_to 'Play Deck', deck_rounds_path(deck.id), :method => :post%> | <%= link_to 'Add Card', new_deck_card_path(deck.id) %> | <%= link_to "Delete Deck", delete_deck_path(id:deck.id), method: :delete, data: {confirm: 'Are you sure you want to delete this deck?'} %></h5>
+	<% @user.decks.each do |deck| %>
+
+		<div class ="deck-container">
+			<h4><%= link_to deck.name, deck_path(deck.id)%> (<%=deck.cards.size%>)</h4>
+			<h5><%= link_to 'Play Deck', deck_rounds_path(deck.id), :method => :post%> | <%= link_to 'Add Card', new_deck_card_path(deck.id) %> | <%= link_to "Delete Deck", delete_deck_path(id:deck.id), method: :delete, data: {confirm: 'Are you sure you want to delete this deck?'} %></h5>
+		</div>
+
+	<% end %>
+
+</div>
+
+<div class ="cards-container">
+
+	<% @user.decks.each do |deck| %>
+	<div class="card-main-profile">
+	<% deck.cards.each do |card| %>
+		<section class="container">
+			<div class="card-title"><%= card.name %></div>
+			<div id="card">
+				<figure class="front">
+					<%= image_tag card.avatar.url(:medium), :class => "img_preview" %>
+				</figure>
+				<figure class="back">
+					<%= card.description %>
+				</figure>
+			</div>
+		</section>
+	<% end %>
 	</div>
-<% end %>
+
+	<% end %>
 
 </div>
