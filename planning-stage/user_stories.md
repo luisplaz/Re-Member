@@ -1,4 +1,4 @@
-## Motivator User Stories
+## Re Member User Stories
 
 ### As a visitor, I can...
 * create a password-protected account

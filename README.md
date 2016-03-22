@@ -10,12 +10,11 @@
 
 ## Resources
 #### User Stories
-[Motivator User Stories](./planning/motivator_user_stories.md)
+[Re-Member User Stories](./planning/\user_stories.md)
 
 #### Schema
 
 #### Trello
 
 #### Creators
-* [Sasha Tailor](http://)
 * [Luis Plaz](http://www.luisplaz.com/)
