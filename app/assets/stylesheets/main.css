@@ -328,6 +328,10 @@ input {
 	margin-top: 0rem;
 }
 
+.card-stats{
+
+}
+
 /*Deck Styling*/
 
 .deck-title{
@@ -431,6 +435,7 @@ input {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	line-height: 2rem;
 }
 
 #card.flipped {
@@ -546,4 +551,16 @@ input {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 1rem
+}
+
+.right-text{
+	color:green;
+}
+
+.wrong-text{
+	color:red;
+}
+
+.card-stats{
+	
 }
