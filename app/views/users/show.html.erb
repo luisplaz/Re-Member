@@ -21,9 +21,8 @@
 
 <div class ="cards-container">
 
-	<% @user.decks.each do |deck| %>
+	<% @user.cards.each do |card| %>
 	<div class="card-main-profile">
-	<% deck.cards.each do |card| %>
 		<section class="container">
 			<div class="card-title"><%= card.name %></div>
 			<div id="card">
@@ -31,13 +30,19 @@
 					<%= image_tag card.avatar.url(:medium), :class => "img_preview" %>
 				</figure>
 				<figure class="back">
-					<%= card.description %>
+					<div class="card-stats">
+						<%= card.description %>
+						<p class="right-text">
+						Right: <%= card.number_right %>
+						</p>
+						 <p class="wrong-text">
+						Wrong:<%= card.number_wrong %>
+						</p>
+					</div>
 				</figure>
 			</div>
 		</section>
-	<% end %>
 	</div>
-
 	<% end %>
 
 </div>
