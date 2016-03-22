@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.includes(:decks).find_by(id: params[:id])
+		@user = User.includes(:decks,decks: [:cards]).find_by(id: params[:id])
 	end
 
 	def create
