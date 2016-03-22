@@ -10,8 +10,7 @@
 
 ## Resources
 #### User Stories
-[Re-Member User Stories](./planning/\user_stories.md)
-
+[Re-Member User Stories](./planning/user_stories.md)
 #### Schema
 
 #### Trello
