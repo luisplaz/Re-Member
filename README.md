@@ -9,10 +9,11 @@
 * omniauth-Linkedin - LinkedIn account authentication
 
 ## Resources
+
 #### User Stories
 [Re-Member User Stories](./planning-stage/user_stories.md)
 #### Schema
-
+![Databse Schema](./planning-stage/Remember_Schema.png)
 #### Trello
 
 #### Creators
